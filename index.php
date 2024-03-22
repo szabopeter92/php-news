@@ -48,13 +48,13 @@ if (isset($_POST['search'])) {
         </form>
 
         <div class="row mt-5">
-            <?php foreach ($news as $new) : ?>
+            <?php foreach ($news as $single_news) : ?>
                 <div class="col-12 bg-secondary rounded p-3 text-white mb-3">
-                    <h3><?php echo $new['title'];  ?></h3>
-                    <p> <strong>Létrehozva: <?php echo $new['date'];  ?> | Szerző: <?php echo $new['author']; ?></strong> </p>
+                    <h3><?php echo $single_news['title'];  ?></h3>
+                    <p> <strong>Létrehozva: <?php echo $single_news['date'];  ?> | Szerző: <?php echo $single_news['author']; ?></strong> </p>
                     <hr>
-                    <p><?php echo $new['intro'];  ?></p>
-                    <a href="news.php?id=<?php echo $new['id']; ?>" class="text-white">Tovább &rarr;</a>
+                    <p><?php echo $single_news['intro'];  ?></p>
+                    <a href="news.php?id=<?php echo $single_news['id']; ?>" class="text-white">Tovább &rarr;</a>
                 </div>
             <?php endforeach; ?>
         </div>
